@@ -1,0 +1,484 @@
+/* Add some custom styles to make the UI more story-like */
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Fade-in animation for smooth transitions */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Story card styling */
+.story-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.story-card .card-header {
+  border-bottom: none;
+  padding: 1rem;
+}
+
+.story-card .card-body {
+  padding: 1.25rem;
+}
+
+.story-card .card-text {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Navigation styling */
+.section-nav .nav-link {
+  color: #495057;
+  border-left: 3px solid transparent;
+  border-radius: 0;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.section-nav .nav-link:hover {
+  background-color: #f8f9fa;
+  border-left-color: #dee2e6;
+}
+
+.section-nav .nav-link.active {
+  background-color: #e9ecef;
+  border-left-color: #007bff;
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Decision point styling */
+.decision-point {
+  background-color: #f8f9fa;
+  border-left: 4px solid #6c757d;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.decision-point h5 {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Consequence panel styling */
+.consequence-panel {
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.positive-consequence {
+  background-color: #f0fff0;
+  border-left: 4px solid #28a745;
+}
+
+.negative-consequence {
+  background-color: #fff0f0;
+  border-left: 4px solid #dc3545;
+}
+
+/* Assessment styling */
+.accordion-button:not(.collapsed) {
+  background-color: #f0f7ff;
+  color: #0d6efd;
+}
+
+/* Story narrative styling */
+.story-narrative p {
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: #212529;
+  font-size: 1.05rem;
+}
+
+/* For mobile devices */
+@media (max-width: 767.98px) {
+  .section-nav {
+    position: static !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  .story-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Scenario card styles */
+.scenario-card {
+  transition: all 0.3s ease;
+}
+
+.scenario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* MCQ styles */
+.mcq-option {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mcq-option:hover {
+  background-color: #f0f0f0;
+}
+
+.mcq-option.selected {
+  background-color: #cfe2ff;
+  border-color: #0d6efd;
+}
+
+.mcq-option.correct {
+  background-color: #d1e7dd;
+  border-color: #198754;
+}
+
+/* Text question styles */
+.text-question-card {
+  background-color: #f8f9fa;
+  border-left: 4px solid #6c757d;
+}
+
+.reflection-prompt-card {
+  background-color: #f8f9fa;
+  border-left: 4px solid #dc3545;
+}
+
+/* Badge styles */
+.badge-section {
+  font-size: 14px;
+}
+
+/* Story Card Styles */
+.story-card {
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.story-card .card-footer {
+  padding: 1rem;
+}
+
+/* Scenario Navigation */
+.scenario-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.scenario-nav .nav-item {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.scenario-nav .nav-link {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.scenario-nav .nav-link:hover {
+  background-color: #f0f0f0;
+}
+
+.scenario-nav .nav-link.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .scenario-nav {
+    flex-direction: column;
+  }
+  
+  .scenario-nav .nav-item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Homepage content animations */
+.display-4 {
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+.lead {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.story-card {
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Enhanced MCQ Options */
+.mcq-options-container {
+  margin-bottom: 15px;
+}
+
+.mcq-option {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-width: 1px;
+  margin-bottom: 10px !important;
+}
+
+.mcq-option:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.mcq-option.selected {
+  background-color: #e7f1ff;
+  border-color: #0d6efd;
+  border-left-width: 4px;
+}
+
+.mcq-option.correct {
+  background-color: rgba(25, 135, 84, 0.1);
+  border-color: #198754;
+  border-left-width: 4px;
+}
+
+.mcq-option.incorrect {
+  background-color: rgba(220, 53, 69, 0.1);
+  border-color: #dc3545;
+  border-left-width: 4px;
+}
+
+.option-key {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.mcq-option.selected .option-key {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.mcq-option.correct .option-key {
+  background-color: #198754;
+  color: white;
+}
+
+.mcq-option.incorrect .option-key {
+  background-color: #dc3545;
+  color: white;
+}
+
+.explanation-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Add styles for decision points and user choices */
+
+.user-choice {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.choice-made {
+  background-color: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.choice-made strong {
+  color: #0d6efd;
+}
+
+.current-decision .card {
+  border-left-width: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.choices .btn {
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.choices .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.progress-tracker {
+  padding: 1rem;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  background-color: #0d6efd;
+  transition: width 0.6s ease;
+}
+
+.story-content {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.user-decision-sequence {
+  border-left: 1px dashed #dee2e6;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .user-choice {
+    margin-left: 0.5rem;
+  }
+  
+  .user-decision-sequence {
+    padding-left: 0.25rem;
+    margin-left: 0.25rem;
+  }
+}
+
+/* Alert styling */
+.alert-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  box-shadow: 0 2px 6px rgba(0, 100, 0, 0.1);
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  box-shadow: 0 2px 6px rgba(100, 0, 0, 0.1);
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  color: #0c5460;
+  box-shadow: 0 2px 6px rgba(0, 0, 100, 0.1);
+}
+
+/* Styling for positive and negative choices */
+.positive-choice {
+  border-left-color: #28a745 !important;
+  background-color: #f8fff8 !important;
+}
+
+.negative-choice {
+  border-left-color: #dc3545 !important;
+  background-color: #fff8f8 !important;
+}
+
+.positive-choice strong {
+  color: #28a745;
+}
+
+.negative-choice strong {
+  color: #dc3545;
+}
+
+/* Alternate header backgrounds */
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+/* Styling for start story button */
+.start-story-btn {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+.start-story-btn:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+
+.start-story-btn i {
+  font-size: 1.1rem;
+}
+
+/* Fix button hover styles to ensure text is always visible */
+.btn-outline-primary:hover {
+  color: #fff !important;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  text-shadow: none;
+}
+
+/* Enhance decision point buttons */
+.choices .btn {
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.choices .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
