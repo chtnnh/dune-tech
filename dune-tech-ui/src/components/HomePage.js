@@ -23,7 +23,7 @@ const HomePage = ({ sections, onSelectSection }) => {
     return (
         <Container className="py-5 fade-in">
             <div className="text-center mb-5">
-                <h1 className="display-4 mb-3">Dune Tech AI Safety Stories</h1>
+                <h1 className="display-4 mb-3">Hikayat AI Safety Stories</h1>
                 <p className="lead text-muted">
                     Explore interactive stories that highlight ethical challenges and safety concerns in artificial intelligence, featuring decision points that let you shape the narrative.
                 </p>

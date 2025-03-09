@@ -1,4 +1,4 @@
-# Dune Tech Scenarios UI
+# Hikayat Scenarios UI
 
 A React-based user interface for displaying AI safety educational scenarios from markdown content.
 

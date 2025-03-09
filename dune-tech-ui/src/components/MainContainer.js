@@ -67,7 +67,7 @@ const MainContainer = ({ markdownContent }) => {
                 <Container>
                     <Navbar.Brand href="#" onClick={handleBackToHome} style={{ cursor: 'pointer' }}>
                         <i className="bi bi-shield-fill-check me-2"></i>
-                        Dune Tech AI Safety Stories
+                        Hikayat AI Safety Stories
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
