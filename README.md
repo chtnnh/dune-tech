@@ -25,22 +25,26 @@ This application takes structured markdown content about AI safety scenarios and
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone [repository-url]
 cd dune-tech-ui
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 3. Start the development server
+
 ```bash
 npm start
 ```
 
 4. Build for production
+
 ```bash
 npm run build
 ```
@@ -95,6 +99,13 @@ Scenario description...
 1. Prompt 1?
 2. Prompt 2?
 ```
+
+## Contributors
+
+- **Chaitanya Mittal** - Responsible for the entire implementation and code
+- **Saima Tariq Khan** - Story development and research
+- **Nermeen Rizvan** - Design and story development
+- **Masah Arar** - Design and research
 
 ## License
 
